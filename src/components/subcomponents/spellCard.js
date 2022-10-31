@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import SpellCardModal from './spellCardModal';
+import SpellCardModal from './SpellCardModal';
 
 
 function SpellCard(props){
