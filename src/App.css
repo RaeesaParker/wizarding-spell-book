@@ -3,13 +3,13 @@
 /* --------------------------------------------------------- */
 
 :root{
-  --darkBrown:#332014; 
-  --lightBrown:#6b2c0c;
-  --red:#9e2b2b;
-  --cream:#edc380;
-  --lightCream:#ffe0b5;
-  --blue:#cfe6db;
-  --navy:#0d253d;
+  --black:#031B28;
+  --darkBlue:#0B2838;
+  --blue:#083248;
+  --red:#8C0E0f;
+  --gold:#E89C31;
+  --cream:#DBA858;
+
 }
 
 /* --------------------------------------------------------- */
@@ -17,6 +17,7 @@
 /* --------------------------------------------------------- */
 
 body{
+  background-color: var(--blue);
   margin: 0;
 }
 
@@ -26,6 +27,7 @@ a{
 }
 
 h2{
+  color: var(--gold);
   font-size: 2.0rem;
   margin: 0 0 2% 0 ;
   text-align: center;
@@ -42,6 +44,7 @@ h4{
 }
 
 p{
+  color:var(--cream);
   font-size: 0.9em;
   margin: 0 0 5% 0;
 }
@@ -56,7 +59,7 @@ p{
 
 /* ----------------- HEADER ------------------ */
 .navbar-customise{
-  background-color: var(--cream);
+  background-color: var(--black);
   border-radius: 1px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   height: 10vh;
@@ -64,12 +67,12 @@ p{
 
 .navbar-brand{
   font-size: 2.5rem;
-  color: black;
+  color: var(--red);
   margin-left:2rem;
 }
 
 .navbar-brand:hover{
-  color: blue;
+  color: var(--blue);
 }
 
 .navbar-container{
@@ -117,26 +120,26 @@ p{
 }
 
 .spell-card{
+  background-color: #DBA858;
+  border: 2px solid var(--gold);
+  border-radius: 25px;
   margin: 1%;
   padding: 2% 1% 0 1% ;
   text-align: center;
   min-width: 20%;
-  background-color: green;
 }
 
 .spell-card-modal{
   padding: 2% 1% 0 1% ;
   text-align: center;
-  background-color: blue;
 }
 
 
 /* ----------------- FOOTER ------------------ */
 .footer {
   align-items: center;
-  background-color: red;
+  background-color: var(--black);
   bottom: 0;
-  color:black;
   display: flex;
   font-size: 0.75rem;
   height: 5vh;
@@ -146,11 +149,11 @@ p{
 }
 
 .footer a {
-  color: black;
+  color: var(--red);
   margin: 0;
   text-decoration: none;
 }
 
 .footer a:hover{
-  color: blue;
+  color: var(--blue);
 }
