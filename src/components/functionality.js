@@ -57,6 +57,7 @@ function Functionality(){
 
   return (
     <div>
+      <h2>{spells[0].type}</h2>
       <div className='spell-container'>
         {/* Map over the spells to generate a card */}
         {spells.map(( spell, spellIndex ) => {
