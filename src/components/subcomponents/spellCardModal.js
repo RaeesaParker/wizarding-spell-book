@@ -1,8 +1,8 @@
 import React from 'react';
-import SpellCardModal from './spellCardModal';
 
 
-function SpellCard(props){
+
+function SpellCardModal(props){
 
     return (
       <div className='spell-card'>
@@ -20,4 +20,4 @@ function SpellCard(props){
   }
   
   
-  export default SpellCard;
+  export default SpellCardModal;
