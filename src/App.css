@@ -72,6 +72,11 @@ p{
   color: blue;
 }
 
+.navbar-container{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
 
 /* ----------------- MENU ------------------ */
 
