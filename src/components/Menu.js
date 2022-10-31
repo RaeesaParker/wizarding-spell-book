@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-function Menu(){
+function Menu(props){
 
   // Get the data from the api - https://wizard-world-api.herokuapp.com/Spells?Type=Charm
   
@@ -11,6 +11,13 @@ function Menu(){
   let sortedMenu = menu.sort()
 
 
+  // Function to set the chosen page 
+  function chosenPageFunc(id){
+
+    // Convert the menu ID into a concotanted string => Will be used in API Path
+    let chosenPageName = menu[id].replace(/\s+/g,'');
+    props.setChosenPage(chosenPageName)
+  }
 
   return (
     <div className='section-menu'>
@@ -18,7 +25,11 @@ function Menu(){
       <div>
         {/* Map over the spell cetegories */}
         {sortedMenu.map(( menuItem, menuIndex ) => {
-          return <p key={menuIndex}>{menuItem}</p>
+          return(
+            <div>
+            <p onClick={() => chosenPageFunc(menuIndex)} key={menuIndex}>{menuItem}</p>
+            </div>
+          )
         })}
       </div>
 

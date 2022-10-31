@@ -2,8 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import SpellCard from './subcomponents/SpellCard';
 
-function SpellPage() {
-
+function SpellPage(props) {
 
   // Set state to store the spells
   const [spells, setSpells] = useState([]);
@@ -14,13 +13,13 @@ function SpellPage() {
   // Set state to store any errors
   const [error, setError] = useState(null)
 
-
+     
   // Get the data 
   useEffect(() => {
     async function getSpells(){
       try{
         const response = await fetch(
-        " https://wizard-world-api.herokuapp.com/Spells?Type=Charm"
+        `https://wizard-world-api.herokuapp.com/Spells?Type=${props.chosenPage}`
         );
           
         // Error if there response is not okay
@@ -43,7 +42,7 @@ function SpellPage() {
     };    
     // Get the spells when a change has been detected
     getSpells();
-  }, []);
+  }, [props.chosenPage]);
 
 
   function sortSpells(dataSpells){

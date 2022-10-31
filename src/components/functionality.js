@@ -20,8 +20,8 @@ function Functionality(){
 
   return (
     <div>
-      <Menu></Menu>
-      <SpellPage></SpellPage>
+      <Menu chosenPage={chosenPage} setChosenPage={setChosenPage}></Menu>
+      <SpellPage chosenPage={chosenPage} setChosenPage={setChosenPage}></SpellPage>
     </div>
     )
 
