@@ -5,26 +5,28 @@ import SpellPage from'./SpellPage';
 
 function Functionality(){
 
-  // Get the data from the api - https://wizard-world-api.herokuapp.com/Spells?Type=Charm
-  
-  //  Menu options = Charm, Conjuration, Spell, Transfiguration, HealingSpell, DarkCharm, Jinx, Curse, MagicalTransportation, Hex, CounterSpell, DarkArts, CounterJinx, CounterCharm, Untransfiguration, BindingMagicalContract, Vanishment
-
-  //  const menu = ["Charm", "Conjuration", "Spell", "Transfiguration", "HealingSpell", "DarkCharm", "Jinx", "Curse", "MagicalTransportation", "Hex", "CounterSpell", "DarkArts", "CounterJinx", "CounterCharm", "Untransfiguration", "BindingMagicalContract", "Vanishment"]
-
   // Set state to store menu item chosen 
-  const [chosenPage, setChosenPage] = useState('')
+  const [chosenPage, setChosenPage] = useState('');
 
-  
+  // Set state to store the route 
+  const [route, setRoute] = useState('menu');
 
+  console.log(route)
 
 
   return (
     <div>
-      <Menu chosenPage={chosenPage} setChosenPage={setChosenPage}></Menu>
-      <SpellPage chosenPage={chosenPage} setChosenPage={setChosenPage}></SpellPage>
-    </div>
-    )
-
+      {route == 'menu' ? 
+        <div> 
+          <Menu chosenPage={chosenPage} setChosenPage={setChosenPage} setRoute={setRoute}></Menu>
+        </div>
+      :
+        <div> 
+          <SpellPage chosenPage={chosenPage} setChosenPage={setChosenPage} setRoute={setRoute}></SpellPage>
+        </div>
+      }
+      </div>    
+  )
 }
 
 export default Functionality;

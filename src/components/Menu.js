@@ -11,12 +11,16 @@ function Menu(props){
   let sortedMenu = menu.sort()
 
 
+
   // Function to set the chosen page 
   function chosenPageFunc(id){
 
     // Convert the menu ID into a concotanted string => Will be used in API Path
     let chosenPageName = menu[id].replace(/\s+/g,'');
     props.setChosenPage(chosenPageName)
+
+    // Change the route to the spell page
+    props.setRoute('spellPage')
   }
 
   return (
