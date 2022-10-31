@@ -1,13 +1,17 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Menu from './Menu';
 import SpellCard from './subcomponents/spellCard';
 
 
 function Functionality(){
 
   // Get the data from the api - https://wizard-world-api.herokuapp.com/Spells?Type=Charm
-  // Map through the array 
-  // Create a card for each spell
+  
+  //  Menu options = Charm, Conjuration, Spell, Transfiguration, HealingSpell, DarkCharm, Jinx, Curse, MagicalTransportation, Hex, CounterSpell, DarkArts, CounterJinx, CounterCharm, Untransfiguration, BindingMagicalContract, Vanishment
+
+  //  const menu = ["Charm", "Conjuration", "Spell", "Transfiguration", "HealingSpell", "DarkCharm", "Jinx", "Curse", "MagicalTransportation", "Hex", "CounterSpell", "DarkArts", "CounterJinx", "CounterCharm", "Untransfiguration", "BindingMagicalContract", "Vanishment"]
+
 
   // Set state to store the spells
   const [spells, setSpells] = useState([]);
@@ -63,7 +67,8 @@ function Functionality(){
 
   return (
     <div>
-      {/* <h2>{spells[0].type}</h2> */}
+      
+      <h2>{spells[0].type}</h2>
       <div className='spell-container'>
         {/* Map over the spells to generate a card */}
         {spells.map(( spell, spellIndex ) => {
@@ -76,7 +81,6 @@ function Functionality(){
             </SpellCard>
         })}
       </div>
-      {/* <button onClick={addOne}>Generate Spells</button> */}
     </div>
     )
 
