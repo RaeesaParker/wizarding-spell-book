@@ -5,7 +5,8 @@ import SpellCardModal from './spellCardModal';
 
 function SpellCard(props){
 
-  let subtitle;
+  Modal.setAppElement('#root');
+
   // State for modal
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -30,7 +31,7 @@ function SpellCard(props){
       >
         <button className='button-close-modal' onClick={closeModal}>X</button>
         <div>
-          <SpellCardModal name={props.name} effect={props.effect} incantation={props.incantation} light={props.light}> </SpellCardModal>
+          <SpellCardModal key={props.id} name={props.name} effect={props.effect} incantation={props.incantation} light={props.light}> </SpellCardModal>
         </div>
       </Modal>
 

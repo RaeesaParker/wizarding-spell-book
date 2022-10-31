@@ -35,7 +35,7 @@ function Functionality(){
         // Set the state of the spells
         const dataSpells = await response.json();
         setSpells(dataSpells);
-        console.log(spells[0])
+        console.log(spells)
       } 
         
       // Catch any errors
@@ -57,11 +57,12 @@ function Functionality(){
 
   return (
     <div>
-      <h2>{spells[0].type}</h2>
+      {/* <h2>{spells[0].type}</h2> */}
       <div className='spell-container'>
         {/* Map over the spells to generate a card */}
         {spells.map(( spell, spellIndex ) => {
-          return <SpellCard 
+          return <SpellCard
+            key={spell.id} 
             name={spell.name} 
             effect={spell.effect} 
             incantation={spell.incantation} 
@@ -69,7 +70,7 @@ function Functionality(){
             </SpellCard>
         })}
       </div>
-      <button onClick={addOne}>Generate Spells</button>
+      {/* <button onClick={addOne}>Generate Spells</button> */}
     </div>
     )
 
