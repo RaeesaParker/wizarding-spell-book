@@ -34,7 +34,9 @@ function Functionality(){
           
         // Set the state of the spells
         const dataSpells = await response.json();
-        setSpells(dataSpells);
+
+        // Sort out the spells into alphabetcal order 
+        sortSpells(dataSpells)
       } 
         
       // Catch any errors
@@ -48,7 +50,16 @@ function Functionality(){
   }, []);
 
 
-  console.log(spells)
+  function sortSpells(dataSpells){
+    dataSpells.sort(function(a, b) {
+      var textA = a.name.toUpperCase();
+      var textB = b.name.toUpperCase();
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
+    setSpells(dataSpells);
+  }
+
+
 
   return (
     <div>
