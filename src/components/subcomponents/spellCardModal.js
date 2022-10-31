@@ -5,7 +5,7 @@ import React from 'react';
 function SpellCardModal(props){
 
     return (
-      <div className='spell-card'>
+      <div className='spell-card-modal'>
         <h3>{props.name}</h3>
         <h4>Effect</h4>
         <p>{props.effect}</p>
