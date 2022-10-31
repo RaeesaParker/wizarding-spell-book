@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+/* --------------------------------------------------------- */
+/* VARIABLES                                                 */
+/* --------------------------------------------------------- */
+
+:root{
+  --darkBrown:#332014; 
+  --lightBrown:#6b2c0c;
+  --red:#9e2b2b;
+  --cream:#edc380;
+  --lightCream:#ffe0b5;
+  --blue:#cfe6db;
+  --navy:#0d253d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --------------------------------------------------------- */
+/* DOCUMENT CLASSES AND ELEMENTS                             */
+/* --------------------------------------------------------- */
+
+body{
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+a{
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+/* --------------------------------------------------------- */
+/* COMPONENT CLASSES                                         */
+/* --------------------------------------------------------- */
+
+/* ----------------- HEADER ------------------ */
+.navbar-customise{
+  background-color: var(--cream);
+  border-radius: 1px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  height: 10vh;
+  margin: auto -16px;
+}
+
+.navbar-brand{
+  font-size: 2.5rem;
+  color: black;
+  margin-left:2rem;
+}
+
+.navbar-brand:hover{
+  color: blue;
+}
+
+
+
+
+
+/* ----------------- FOOTER ------------------ */
+.footer {
   align-items: center;
+  background-color: red;
+  color:black;
+  display: flex;
+  font-size: 0.75rem;
+  height: 5vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: -20px;
 }
 
-.App-link {
-  color: #61dafb;
+.footer a {
+  color: black;
+  margin: 0;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer a:hover{
+  color: blue;
 }
