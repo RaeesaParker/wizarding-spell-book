@@ -35,7 +35,6 @@ function Functionality(){
         // Set the state of the spells
         const dataSpells = await response.json();
         setSpells(dataSpells);
-        console.log(spells)
       } 
         
       // Catch any errors
@@ -46,14 +45,10 @@ function Functionality(){
     };    
     // Get the spells when a change has been detected
     getSpells();
-  }, [change]);
+  }, []);
 
 
-  // Function to make a change => Triggers the useEffect
-  const addOne = () => {
-    setChange(change + 1);
-  };
-  
+  console.log(spells)
 
   return (
     <div>
