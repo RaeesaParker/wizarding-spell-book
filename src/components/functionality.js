@@ -58,13 +58,20 @@ function Functionality(){
   return (
     <div>
       <div className='spell-container'>
-        <SpellCard name={spells[0].name} effect={spells[0].effect} incantation={spells[0].incantation} light={spells[0].light} > </SpellCard>
+        {/* Map over the spells to generate a card */}
+        {spells.map(( spell, spellIndex ) => {
+          return <SpellCard 
+            name={spell.name} 
+            effect={spell.effect} 
+            incantation={spell.incantation} 
+            light={spell.light} > 
+            </SpellCard>
+        })}
       </div>
       <button onClick={addOne}>Generate Spells</button>
     </div>
     )
 
 }
-
 
 export default Functionality;

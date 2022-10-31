@@ -87,6 +87,7 @@ p{
   align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -99,7 +100,6 @@ p{
 }
 
 .spell-card-modal{
-
   padding: 2% 1% 0 1% ;
   text-align: center;
   background-color: blue;
@@ -116,7 +116,7 @@ p{
   font-size: 0.75rem;
   height: 5vh;
   justify-content: center;
-  position: absolute;
+  position: relative;
   width: 100vw;
 }
 
