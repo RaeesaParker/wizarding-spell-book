@@ -32,13 +32,11 @@ function Menu(props){
   return (
     <div className='section-menu'>
       <h2>Contents</h2>
-      <div>
+      <div className='menu-container'>
         {/* Map over the spell cetegories */}
         {sortedMenu.map(( menuItem, menuIndex ) => {
           return(
-            <div>
             <p onClick={() => chosenPageFunc(menuIndex)} key={menuIndex}>{menuItem}</p>
-            </div>
           )
         })}
       </div>

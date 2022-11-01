@@ -10,6 +10,8 @@
   --gold:#E89C31;
   --cream:#DBA858;
 
+  --titleFont: 'Fondamento', cursive;
+  --bodyFont: 'Noto Nastaliq Urdu', serif;
 }
 
 /* --------------------------------------------------------- */
@@ -18,9 +20,10 @@
 
 body{
   background-color: var(--blue);
+  font-family: var(--bodyFont);
   margin: 0;
+  word-spacing: 5px;
 }
-
 
 a{
   text-decoration: none;
@@ -29,24 +32,27 @@ a{
 h2{
   color: var(--gold);
   font-size: 2.0rem;
-  margin: 0 0 2% 0 ;
+  margin: 0 0 0 0 ;
   text-align: center;
 }
 
 h3{
   font-size: 1.5rem;
-  margin: 0 0 5% 0 ;
+  line-height: 3.0rem;
+  margin: 0 0 1% 0 ;
 }
 
 h4{
   font-size: 1.0rem;
-  margin: 0 0 1% 0 ; 
+  line-height: 2.0rem;
+  margin: 5% 0 0 0 ; 
 }
 
 p{
   color:var(--cream);
-  font-size: 0.9em;
-  margin: 0 0 5% 0;
+  font-size: 1.0em;
+  line-height: 1.2rem;
+  margin: 0;
 }
 
 
@@ -66,6 +72,7 @@ p{
 }
 
 .navbar-brand{
+  font-family: var(--titleFont);
   font-size: 2.5rem;
   color: var(--red);
   margin-left:2rem;
@@ -81,18 +88,35 @@ p{
   justify-content: space-between;
 }
 
+#navbar-contents{
+  color: var(--cream);
+  margin-right: 10%;
+}
+
+#navbar-contents:hover{
+  color: var(--red);
+  cursor: pointer;
+}
+
+
+
 /* ----------------- MENU ------------------ */
 
 .section-menu{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   height: 85vh;
-  justify-content: center;
 }
 
 .section-menu p {
+  margin: 3% 5%;
   text-align: center;
+}
+
+.menu-container{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
@@ -111,12 +135,25 @@ p{
   width: 40vw;
 }
 
+.button-close-modal{
+  background: transparent;
+  border: none;
+  float: right;
+}
+
+.button-close-modal:hover{
+  color: var(--red);
+  cursor: pointer;
+}
+
+
 .spell-container{
   align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 85vh ;
 }
 
 .spell-card{
@@ -129,7 +166,6 @@ p{
 }
 
 .spell-card-modal{
-  padding: 2% 1% 0 1% ;
   text-align: center;
 }
 
