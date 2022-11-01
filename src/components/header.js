@@ -1,12 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
-function Heading(props){
+function Heading(){
 
 
-  function contentsPageFunc(){
-    props.setRoute('menu')
-  }
 
   // ----------------------------------------------------------------- //
   // Define the return
@@ -16,8 +14,19 @@ function Heading(props){
     <div>
       <nav className="navbar navbar-expand-lg  navbar-customise">
         <div className="navbar-container">
-          <a className="navbar-brand" href="#">Spell Book</a>
-          <a id="navbar-contents" onClick={()=> contentsPageFunc()}>Contents</a>
+
+          <Link className="navbar-brand" to={'/home'}>
+            <a>Spell Book</a>
+          </Link>
+
+          <Link class="navbar-contents" to={'/home'} > 
+            <a>Title Page</a> 
+          </Link> 
+
+          <Link class="navbar-contents" to={'/menu'} > 
+            <a>Contents Page</a> 
+          </Link> 
+
         </div>
       </nav>
     </div>

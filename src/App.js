@@ -1,20 +1,19 @@
 import './App.css';
 import { useState } from 'react';
+import { BrowserRouter , Routes , Route , Link   } from 'react-router-dom';
 import Heading from './components/Header';
 import Functionality from './components/Functionality';
 import Footer from './components/Footer';
 
 function App() {
 
-  // Set the state for the route
-  const [route, setRoute] = useState('menu');
-
-
   return (
     <div >
-     <Heading route={route} setRoute={setRoute}></Heading>
-     <Functionality route={route} setRoute={setRoute}></Functionality>
-     <Footer></Footer>
+      <BrowserRouter>
+        <Heading></Heading>
+        <Functionality></Functionality>
+        <Footer></Footer>
+      </BrowserRouter>
     </div>
   );
 }

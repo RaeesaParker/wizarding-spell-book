@@ -1,9 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 
 function Menu(props){
-
-  // Get the data from the api - https://wizard-world-api.herokuapp.com/Spells?Type=Charm
   
   // Items for the menu
   const menu = ["All Spells", "Charm", "Conjuration", "Spell", "Transfiguration", "Healing Spell", "Dark Charm", "Jinx", "Curse", "Magical Transportation", "Hex", "Counter Spell", "Dark Arts", "Counter Jinx", "Counter Charm", "Untransfiguration", "Binding Magical Contract", "Vanishment"]
@@ -22,27 +21,27 @@ function Menu(props){
     if (id == 0){
       chosenPageName = " ";
     }
-
     props.setChosenPage(chosenPageName)
-
-    // Change the route to the spell page
-    props.setRoute('spellPage')
   }
 
   return (
     <div className='section-menu'>
+      
       <h2>Contents</h2>
+
       <div className='menu-container'>
-        {/* Map over the spell cetegories */}
+
         {sortedMenu.map(( menuItem, menuIndex ) => {
           return(
-            <p onClick={() => chosenPageFunc(menuIndex)} key={menuIndex}>{menuItem}</p>
+            <Link className='menu-link' to={`/spells`} >
+              <p onClick={() => chosenPageFunc(menuIndex)} key={menuIndex}>{menuItem}</p>
+            </Link>
           )
         })}
-      </div>
 
+      </div>
     </div>
-    )
+  )
 
 }
 
