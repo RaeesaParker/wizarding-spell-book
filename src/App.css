@@ -90,7 +90,7 @@ p{
 
 #navbar-contents{
   color: var(--cream);
-  margin-right: 10%;
+  margin-right: 10rem;
 }
 
 #navbar-contents:hover{
@@ -106,11 +106,6 @@ p{
   height: 85vh;
 }
 
-.section-menu p {
-  margin: 3% 5%;
-  text-align: center;
-}
-
 .menu-container{
   align-items: center;
   display: flex;
@@ -118,6 +113,13 @@ p{
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.section-menu p {
+  margin: 3rem 4rem;
+  text-align: center;
+}
+
+
 
 
 /* ----------------- SPELLS ------------------ */
