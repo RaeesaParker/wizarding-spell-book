@@ -114,12 +114,11 @@ p{
   justify-content: center;
 }
 
-.section-menu p {
-  margin: 3rem 4rem;
+
+.menu-link{
+  margin: 5%;
   text-align: center;
 }
-
-
 
 
 /* ----------------- SPELLS ------------------ */

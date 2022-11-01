@@ -52,6 +52,7 @@ function SpellPage(props) {
     });
     setSpells(dataSpells);
   }
+  
 
   return (
     <div>

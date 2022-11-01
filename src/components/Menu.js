@@ -34,7 +34,7 @@ function Menu(props){
 
         {sortedMenu.map(( menuItem, menuIndex ) => {
           return(
-            <Link to={'/spells'}>
+            <Link className='menu-link' to={`/spells`} >
               <p onClick={() => chosenPageFunc(menuIndex)} key={menuIndex}>{menuItem}</p>
             </Link>
           )
