@@ -43,7 +43,7 @@ function SpellPage(props) {
     getSpells();
   }, [props.chosenPage]);
 
-
+  // Sort the spells by alphabetical order
   function sortSpells(dataSpells){
     dataSpells.sort(function(a, b) {
       var textA = a.name.toUpperCase();
@@ -52,7 +52,7 @@ function SpellPage(props) {
     });
     setSpells(dataSpells);
   }
-  
+
 
   return (
     <div>

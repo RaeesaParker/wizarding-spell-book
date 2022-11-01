@@ -21,7 +21,6 @@ function Menu(props){
     if (id == 0){
       chosenPageName = " ";
     }
-
     props.setChosenPage(chosenPageName)
   }
 

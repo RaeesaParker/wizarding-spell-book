@@ -72,6 +72,7 @@ p{
 }
 
 .navbar-brand{
+  flex-grow: 2;
   font-family: var(--titleFont);
   font-size: 2.5rem;
   color: var(--red);
@@ -88,12 +89,12 @@ p{
   justify-content: space-between;
 }
 
-#navbar-contents{
+.navbar-contents{
   color: var(--cream);
   margin-right: 10rem;
 }
 
-#navbar-contents:hover{
+.navbar-contents:hover{
   color: var(--red);
   cursor: pointer;
 }

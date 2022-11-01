@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Routes , Route } from 'react-router-dom';
 import Menu from './Menu';
+import About from './About';
 import SpellPage from'./SpellPage';
 
 function Functionality(){
@@ -17,9 +18,14 @@ function Functionality(){
           element={<Menu chosenPage={chosenPage} setChosenPage={setChosenPage}></Menu>}
         /> 
         <Route 
+          path='/home'
+          element={<About></About>}
+        /> 
+        <Route 
           path ={`/spells`}
           element= {<SpellPage chosenPage={chosenPage} setChosenPage={setChosenPage}></SpellPage>}
         />
+      
       </Routes>
       </div>    
   )
