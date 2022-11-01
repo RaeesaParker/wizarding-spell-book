@@ -6,7 +6,7 @@ function Menu(props){
   // Get the data from the api - https://wizard-world-api.herokuapp.com/Spells?Type=Charm
   
   // Items for the menu
-  const menu = ["Charm", "Conjuration", "Spell", "Transfiguration", "Healing Spell", "Dark Charm", "Jinx", "Curse", "Magical Transportation", "Hex", "Counter Spell", "Dark Arts", "Counter Jinx", "Counter Charm", "Untransfiguration", "Binding Magical Contract", "Vanishment"]
+  const menu = ["All Spells", "Charm", "Conjuration", "Spell", "Transfiguration", "Healing Spell", "Dark Charm", "Jinx", "Curse", "Magical Transportation", "Hex", "Counter Spell", "Dark Arts", "Counter Jinx", "Counter Charm", "Untransfiguration", "Binding Magical Contract", "Vanishment"]
 
   let sortedMenu = menu.sort()
 
@@ -17,6 +17,12 @@ function Menu(props){
 
     // Convert the menu ID into a concotanted string => Will be used in API Path
     let chosenPageName = menu[id].replace(/\s+/g,'');
+
+    // Set chosen page for all spells
+    if (id == 0){
+      chosenPageName = " ";
+    }
+
     props.setChosenPage(chosenPageName)
 
     // Change the route to the spell page

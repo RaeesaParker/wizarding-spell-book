@@ -6,7 +6,7 @@ import SpellPage from'./SpellPage';
 function Functionality(props){
 
   // Set state to store menu item chosen 
-  const [chosenPage, setChosenPage] = useState('');
+  const [chosenPage, setChosenPage] = useState(' ');
 
   return (
     <div>
