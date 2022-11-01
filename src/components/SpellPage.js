@@ -18,10 +18,9 @@ function SpellPage(props) {
   useEffect(() => {
     async function getSpells(){
       try{
-        const response = await fetch(
-        `https://wizard-world-api.herokuapp.com/Spells?Type=${props.chosenPage}`
+        let response = await fetch(
+          `https://wizard-world-api.herokuapp.com/Spells?Type=${props.chosenPage}`
         );
-          
         // Error if there response is not okay
         if (!response.ok){
           throw new Error(response.statusText) 
