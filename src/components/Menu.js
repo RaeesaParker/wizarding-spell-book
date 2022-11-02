@@ -1,13 +1,18 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect , useRef} from 'react';
 import {Link} from 'react-router-dom';
 
 function Menu(props){
-  
+
+  // Set state of the routing path 
+
+
   // Items for the menu
   const menu = ["All Spells", "Charm", "Conjuration", "Spell", "Transfiguration", "Healing Spell", "Dark Charm", "Jinx", "Curse", "Magical Transportation", "Hex", "Counter Spell", "Dark Arts", "Counter Jinx", "Counter Charm", "Untransfiguration", "Binding Magical Contract", "Vanishment"]
 
   let sortedMenu = menu.sort()
+
+  // Create array to store menu without spaces
 
 
 
@@ -21,6 +26,7 @@ function Menu(props){
     if (id == 0){
       chosenPageName = " ";
     }
+    console.log("Menu chosenPage:", props.chosenPage)
     props.setChosenPage(chosenPageName)
   }
 
@@ -33,7 +39,7 @@ function Menu(props){
 
         {sortedMenu.map(( menuItem, menuIndex ) => {
           return(
-            <Link className='menu-link' to={`/spells`} >
+            <Link key={menuIndex} className='menu-link' to={`/spells/${menuItem.replace(/\s+/g,'')}`} >
               <p onClick={() => chosenPageFunc(menuIndex)} key={menuIndex}>{menuItem}</p>
             </Link>
           )

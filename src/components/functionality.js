@@ -22,7 +22,7 @@ function Functionality(){
           element={<About></About>}
         /> 
         <Route 
-          path ={`/spells`}
+          path ={`/spells/:spellType`}
           element= {<SpellPage chosenPage={chosenPage} setChosenPage={setChosenPage}></SpellPage>}
         />
       

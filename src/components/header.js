@@ -16,15 +16,15 @@ function Heading(){
         <div className="navbar-container">
 
           <Link className="navbar-brand" to={'/home'}>
-            <a>Spell Book</a>
+            <p>Spell Book</p>
           </Link>
 
-          <Link class="navbar-contents" to={'/home'} > 
-            <a>Title Page</a> 
+          <Link className="navbar-contents" to={'/home'} > 
+            <p>Title Page</p> 
           </Link> 
 
-          <Link class="navbar-contents" to={'/menu'} > 
-            <a>Contents Page</a> 
+          <Link className="navbar-contents" to={'/menu'} > 
+            <p>Contents Page</p> 
           </Link> 
 
         </div>
