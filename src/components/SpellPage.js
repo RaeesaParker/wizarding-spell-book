@@ -1,15 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import SpellCard from './subcomponents/SpellCard';
+import SearchBox from './subcomponents/searchBox';
 
 function SpellPage(props) {
 
   // Set state to store the spells
   const [spells, setSpells] = useState([]);
 
-
   // Set state to store any errors
   const [error, setError] = useState(null)
+
+  // Set the state to store the filtered spells
+  const [filteredSpells, setFilteredSpells] = useState([]);
+
 
      
   // Get the data 
@@ -52,8 +56,15 @@ function SpellPage(props) {
   }
 
 
+
+
+
   return (
     <div>
+      <div>
+      <SearchBox  > </SearchBox>
+      </div>
+      
       <div className='spell-container'>
         {/* Map over the spells to generate a card */}
         {spells.map(( spell, spellIndex ) => {

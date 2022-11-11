@@ -1,16 +1,18 @@
 import React from 'react';
-import { useState } from 'react';
 
 
-function searchBox(){
-
-
+function SearchBox(props){
 
   return (
-    <div>
-
-      </div>    
+    <div id="search-box-div" >
+      <input
+        id="search-box-input"
+        type='search'
+        placeholder='Search Spells'
+        onChange={props.onSearchChange}
+      />
+    </div>
   )
 }
 
-export default searchBox;
+export default SearchBox;
