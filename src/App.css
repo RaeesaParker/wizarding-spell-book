@@ -3,12 +3,11 @@
 /* --------------------------------------------------------- */
 
 :root{
-  --black:#031B28;
   --darkBlue:#0B2838;
   --blue:#083248;
-  --red:#8C0E0f;
-  --gold:#E89C31;
-  --cream:#DBA858;
+  --red:#6C0E23;
+  --gold:#77867F;
+  --cream:#FBF5F3;
 
   --titleFont: 'Fondamento', cursive;
   --bodyFont: 'Noto Nastaliq Urdu', serif;
@@ -19,7 +18,7 @@
 /* --------------------------------------------------------- */
 
 body{
-  background-color: var(--blue);
+  background-color: var(--cream);
   font-family: var(--bodyFont);
   height:100%;
   margin: 0;
@@ -31,7 +30,7 @@ a{
 }
 
 h2{
-  color: var(--gold);
+  color: var(--red);
   font-size: 2.0rem;
   margin: 0 0 0 0 ;
   text-align: center;
@@ -50,7 +49,7 @@ h4{
 }
 
 p{
-  color:var(--cream);
+  color:var(--blue);
   font-size: 1.0em;
   line-height: 1.2rem;
   margin: 0;
@@ -66,7 +65,7 @@ p{
 
 /* ----------------- HEADER ------------------ */
 .navbar-customise{
-  background-color: var(--black);
+  background-color: var(--darkBlue);
   border-radius: 1px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   height: 10vh;
@@ -76,13 +75,9 @@ p{
   flex-grow: 2;
   font-family: var(--titleFont);
   font-size: 2.5rem;
-  color: var(--red);
   margin-left:2rem;
 }
 
-.navbar-brand:hover{
-  color: var(--blue);
-}
 
 .navbar-container{
   align-items: center;
@@ -91,14 +86,18 @@ p{
   justify-content: space-between;
 }
 
-.navbar-contents{
-  color: var(--cream);
-  margin-right: 10rem;
+.navbar-container p{
+  color: var(--gold);
 }
 
-.navbar-contents:hover{
-  color: var(--red);
+.navbar-container p:hover{
+  color: var(--cream);
   cursor: pointer;
+}
+
+
+.navbar-contents{
+  margin-right: 10rem;
 }
 
 
@@ -117,11 +116,15 @@ p{
   justify-content: center;
 }
 
+.menu-container p:hover{
+  color:var(--cream);
+}
 
 .menu-link{
   margin: 4%;
   text-align: center;
 }
+
 
 
 
@@ -205,7 +208,7 @@ p{
 /* ----------------- FOOTER ------------------ */
 .footer {
   align-items: center;
-  background-color: var(--black);
+  background-color: var(--darkBlue);
   bottom: 0;
   display: flex;
   font-size: 0.75rem;
@@ -216,11 +219,11 @@ p{
 }
 
 .footer a {
-  color: var(--red);
+  color: var(--gold);
   margin: 0;
   text-decoration: none;
 }
 
 .footer a:hover{
-  color: var(--blue);
+  color: var(--cream);
 }
