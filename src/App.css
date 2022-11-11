@@ -21,6 +21,7 @@
 body{
   background-color: var(--blue);
   font-family: var(--bodyFont);
+  height:100%;
   margin: 0;
   word-spacing: 5px;
 }
@@ -210,7 +211,7 @@ p{
   font-size: 0.75rem;
   height: 5vh;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   width: 100vw;
 }
 
