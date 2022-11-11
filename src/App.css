@@ -105,7 +105,7 @@ p{
 /* ----------------- MENU ------------------ */
 
 .section-menu{
-  height: 85vh;
+  min-height: 85vh;
 }
 
 .menu-container{
@@ -121,6 +121,21 @@ p{
   margin: 4%;
   text-align: center;
 }
+
+
+
+/* ----------------- ABOUT ------------------ */
+
+.section-about{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 85vh;
+  justify-content: space-evenly;
+}
+
+
 
 
 /* ----------------- SPELLS ------------------ */
