@@ -11,8 +11,9 @@ function SpellPage(props) {
   // Set state to store any errors
   const [error, setError] = useState(null)
 
-  // Set the state to store the filtered spells
-  const [filteredSpells, setFilteredSpells] = useState([]);
+  // Create a state that will update the search field
+  const [searchObject, setSearchObject] = React.useState(' ');
+
 
 
      
@@ -45,6 +46,7 @@ function SpellPage(props) {
     getSpells();
   }, [props.chosenPage]);
 
+
   // Sort the spells by alphabetical order
   function sortSpells(dataSpells){
     dataSpells.sort(function(a, b) {
@@ -56,18 +58,46 @@ function SpellPage(props) {
   }
 
 
+  // Create a function that will store changes made to the search box
+  function onSearchChange(event){
+    // Set the state to be the search item
+    setSearchObject(event.target.value.toLowerCase())
+  }
 
+
+    //----- Functionality to search through spells
+
+    // Filter through the spells array to find matching object
+    let filteredSpells = spells.filter((spell) => {
+
+    // Turn the spell to lowercase
+    let nameLower = spell.name.toLowerCase();
+    if ( spell.effect == null ){
+      spell.effect = '';
+    }
+    if ( spell.incantation == null ){
+      spell.incantation = '';
+    }
+    let effectLower = spell.effect.toLowerCase() || '' 
+    let incantationLower = spell.incantation.toLowerCase() || ''
+    return nameLower.includes(searchObject) || effectLower.includes(searchObject) || incantationLower.includes(searchObject)
+    })
+
+  
+  
 
 
   return (
     <div>
       <div>
-      <SearchBox  > </SearchBox>
+      <SearchBox 
+        onSearchChange={onSearchChange}> 
+      </SearchBox>
       </div>
       
       <div className='spell-container'>
         {/* Map over the spells to generate a card */}
-        {spells.map(( spell, spellIndex ) => {
+        {filteredSpells.map(( spell, spellIndex ) => {
           return <SpellCard
             key={spell.id} 
             name={spell.name} 
