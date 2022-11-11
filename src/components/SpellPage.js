@@ -7,8 +7,6 @@ function SpellPage(props) {
   // Set state to store the spells
   const [spells, setSpells] = useState([]);
 
-  // Set state to detect change & trigger api
-  const [change, setChange] = useState(0);
 
   // Set state to store any errors
   const [error, setError] = useState(null)
