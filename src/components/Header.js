@@ -14,12 +14,12 @@ function Heading(){
     <div>
       <nav className="navbar navbar-expand-lg  navbar-customise">
         <div className="navbar-brand">
-        <Link  to={'wizarding-spell-book/'}>
+        <Link  to={'/'}>
             <p>Wizarding Spell Book</p>
           </Link>
         </div>
         <div className="navbar-contents" >
-        <Link to={'wizarding-spell-book/'} > 
+        <Link to={'/'} > 
             <p>Title Page</p> 
           </Link> 
         </div>

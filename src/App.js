@@ -10,8 +10,11 @@ function App() {
   return (
     <div >
       <BrowserRouter>
-        <Heading></Heading>
-        <Functionality></Functionality>
+      <Heading></Heading>
+      {/* <Routes path='wizarding-spell-book/'
+          element={<Functionality></Functionality>} >
+      </Routes> */}
+      <Functionality></Functionality>
         <Footer></Footer>
       </BrowserRouter>
     </div>
