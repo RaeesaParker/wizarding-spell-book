@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wizarding-spell-book/static/css/main.642c517d.css",
+    "main.js": "/wizarding-spell-book/static/js/main.b0808b91.js",
+    "index.html": "/wizarding-spell-book/index.html",
+    "main.642c517d.css.map": "/wizarding-spell-book/static/css/main.642c517d.css.map",
+    "main.b0808b91.js.map": "/wizarding-spell-book/static/js/main.b0808b91.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.642c517d.css",
+    "static/js/main.b0808b91.js"
+  ]
+}
