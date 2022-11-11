@@ -16,7 +16,7 @@ function Heading(){
         <div className="navbar-container">
 
           <Link className="navbar-brand" to={'/'}>
-            <p>Spell Book</p>
+            <p>Wizarding Spell Book</p>
           </Link>
 
           <Link className="navbar-contents" to={'/'} > 

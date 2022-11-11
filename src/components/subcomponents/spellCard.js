@@ -22,9 +22,7 @@ function SpellCard(props){
 
     return (
       <div className='spell-card'>
-        <h3>{props.name}</h3>
-        <button className='button-open-modal' onClick={openModal}>Spell Info</button>
-      
+        <h4 onClick={openModal}>{props.name} </h4>      
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
