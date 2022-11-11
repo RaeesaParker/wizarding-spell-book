@@ -1,11 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import SpellCard from './subcomponents/SpellCard';
 
 function SpellPage(props) {
-
-  const {spellType} = useParams()
 
   // Set state to store the spells
   const [spells, setSpells] = useState([]);

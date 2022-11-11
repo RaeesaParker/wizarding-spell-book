@@ -15,11 +15,11 @@ function Heading(){
       <nav className="navbar navbar-expand-lg  navbar-customise">
         <div className="navbar-container">
 
-          <Link className="navbar-brand" to={'/home'}>
+          <Link className="navbar-brand" to={'/'}>
             <p>Spell Book</p>
           </Link>
 
-          <Link className="navbar-contents" to={'/home'} > 
+          <Link className="navbar-contents" to={'/'} > 
             <p>Title Page</p> 
           </Link> 
 

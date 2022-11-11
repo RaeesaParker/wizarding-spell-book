@@ -16,11 +16,11 @@ function Functionality(){
         <Route 
           path='/menu'
           element={<Menu chosenPage={chosenPage} setChosenPage={setChosenPage}></Menu>}
-        /> 
+        />
         <Route 
-          path='/home'
-          element={<About></About>}
-        /> 
+          path='/'
+          element={<About></About>} 
+        />
         <Route 
           path ={`/spells/:spellType`}
           element= {<SpellPage chosenPage={chosenPage} setChosenPage={setChosenPage}></SpellPage>}
