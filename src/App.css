@@ -3,12 +3,11 @@
 /* --------------------------------------------------------- */
 
 :root{
-  --black:#031B28;
   --darkBlue:#0B2838;
   --blue:#083248;
-  --red:#8C0E0f;
-  --gold:#E89C31;
-  --cream:#DBA858;
+  --red:#6C0E23;
+  --gold:#77867F;
+  --cream:#FBF5F3;
 
   --titleFont: 'Fondamento', cursive;
   --bodyFont: 'Noto Nastaliq Urdu', serif;
@@ -19,7 +18,7 @@
 /* --------------------------------------------------------- */
 
 body{
-  background-color: var(--blue);
+  background-color: var(--cream);
   font-family: var(--bodyFont);
   height:100%;
   margin: 0;
@@ -31,27 +30,29 @@ a{
 }
 
 h2{
-  color: var(--gold);
+  color: var(--red);
   font-size: 2.0rem;
   margin: 0 0 0 0 ;
   text-align: center;
 }
 
 h3{
+  color: var(--red);
   font-size: 1.5rem;
   line-height: 3.0rem;
-  margin: 0 0 1% 0 ;
+  margin: 0 0 0 0 ;
 }
 
 h4{
-  font-size: 1.0rem;
+  color: var(--red);
+  font-size: 1.4rem;
   line-height: 2.0rem;
   margin: 5% 0 0 0 ; 
 }
 
 p{
-  color:var(--cream);
-  font-size: 1.0em;
+  color:var(--blue);
+  font-size: 1.2em;
   line-height: 1.2rem;
   margin: 0;
 }
@@ -66,39 +67,36 @@ p{
 
 /* ----------------- HEADER ------------------ */
 .navbar-customise{
-  background-color: var(--black);
+  background-color: var(--darkBlue);
   border-radius: 1px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
   height: 10vh;
+  justify-content: space-between;
+  padding: 1% 0;
+}
+
+.navbar-customise p{
+  color: var(--gold);
+}
+
+.navbar-customise p:hover{
+  color: var(--cream);
 }
 
 .navbar-brand{
-  flex-grow: 2;
-  font-family: var(--titleFont);
-  font-size: 2.5rem;
-  color: var(--red);
-  margin-left:2rem;
-}
-
-.navbar-brand:hover{
-  color: var(--blue);
-}
-
-.navbar-container{
   align-items: center;
   display: flex;
-  height: 100%;
-  justify-content: space-between;
+  font-family: var(--titleFont);
+  font-size: 2.5em;
+  margin: 0 2rem 0 2rem;
 }
 
 .navbar-contents{
-  color: var(--cream);
-  margin-right: 10rem;
-}
-
-.navbar-contents:hover{
-  color: var(--red);
-  cursor: pointer;
+  align-items: center;
+  display: flex;
+  margin: 0 2% 0 0;
 }
 
 
@@ -117,11 +115,15 @@ p{
   justify-content: center;
 }
 
+.menu-container p:hover{
+  color:var(--gold);
+}
 
 .menu-link{
-  margin: 4%;
+  margin: 3%;
   text-align: center;
 }
+
 
 
 
@@ -149,10 +151,12 @@ p{
 }
 
 #search-box-input{
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--darkBlue);
   padding: 1%;
   width: 30%;
 }
-
 
 .ReactModal__Overlay{
   display: flex;
@@ -164,6 +168,7 @@ p{
   height: 50%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   width: 40vw;
 }
 
@@ -174,7 +179,7 @@ p{
 }
 
 .button-close-modal:hover{
-  color: var(--red);
+  color: var(--gold);
   cursor: pointer;
 }
 
@@ -189,23 +194,30 @@ p{
 }
 
 .spell-card{
-  background-color: #DBA858;
+  align-items: center;
+  background-color: var(--blue);
   border: 2px solid var(--gold);
+  display: flex;
+  justify-content: center;
   margin: 1%;
-  padding: 2% 1% 0 1% ;
-  text-align: center;
-  min-width: 20%;
+  padding: 0 0.5% 1% 0.5%;
+  min-width: 10%;
 }
 
-.spell-card-modal{
-  text-align: center;
+.spell-card:hover{
+  cursor: pointer;
+}
+
+.spell-card h4{
+color: var(--cream);
+margin-top: 0;
 }
 
 
 /* ----------------- FOOTER ------------------ */
 .footer {
   align-items: center;
-  background-color: var(--black);
+  background-color: var(--darkBlue);
   bottom: 0;
   display: flex;
   font-size: 0.75rem;
@@ -216,11 +228,11 @@ p{
 }
 
 .footer a {
-  color: var(--red);
+  color: var(--gold);
   margin: 0;
   text-decoration: none;
 }
 
 .footer a:hover{
-  color: var(--blue);
+  color: var(--cream);
 }

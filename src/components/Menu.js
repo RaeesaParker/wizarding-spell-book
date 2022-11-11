@@ -12,9 +12,6 @@ function Menu(props){
 
   let sortedMenu = menu.sort()
 
-  // Create array to store menu without spaces
-
-
 
   // Function to set the chosen page 
   function chosenPageFunc(id){

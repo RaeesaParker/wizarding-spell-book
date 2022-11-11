@@ -13,21 +13,23 @@ function Heading(){
   return (
     <div>
       <nav className="navbar navbar-expand-lg  navbar-customise">
-        <div className="navbar-container">
-
-          <Link className="navbar-brand" to={'/'}>
-            <p>Spell Book</p>
+        <div className="navbar-brand">
+        <Link  to={'/'}>
+            <p>Wizarding Spell Book</p>
           </Link>
-
-          <Link className="navbar-contents" to={'/'} > 
+        </div>
+        <div className="navbar-contents" >
+        <Link to={'/'} > 
             <p>Title Page</p> 
           </Link> 
-
-          <Link className="navbar-contents" to={'/menu'} > 
+        </div>
+        <div className="navbar-contents">
+          <Link  to={'/menu'} > 
             <p>Contents Page</p> 
           </Link> 
-
         </div>
+
+
       </nav>
     </div>
     )
