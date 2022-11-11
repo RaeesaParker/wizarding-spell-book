@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import SpellCard from './subcomponents/SpellCard';
-import SearchBox from './subcomponents/searchBox';
+import SearchBox from './subcomponents/SearchBox';
 
 function SpellPage(props) {
 
