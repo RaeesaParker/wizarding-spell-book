@@ -210,7 +210,7 @@ p{
   font-size: 0.75rem;
   height: 5vh;
   justify-content: center;
-  position: relative;
+  position: absolute;
   width: 100vw;
 }
 
