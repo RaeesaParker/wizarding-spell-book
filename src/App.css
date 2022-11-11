@@ -21,6 +21,7 @@
 body{
   background-color: var(--blue);
   font-family: var(--bodyFont);
+  height:100%;
   margin: 0;
   word-spacing: 5px;
 }
@@ -140,6 +141,19 @@ p{
 
 /* ----------------- SPELLS ------------------ */
 
+#search-box-div{
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+#search-box-input{
+  padding: 1%;
+  width: 30%;
+}
+
+
 .ReactModal__Overlay{
   display: flex;
   justify-content: center;
@@ -171,7 +185,7 @@ p{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 85vh ;
+  min-height: 65vh ;
 }
 
 .spell-card{
@@ -197,7 +211,7 @@ p{
   font-size: 0.75rem;
   height: 5vh;
   justify-content: center;
-  position: relative;
+  position: fixed;
   width: 100vw;
 }
 
