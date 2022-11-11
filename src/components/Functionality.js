@@ -18,7 +18,7 @@ function Functionality(){
           element={<Menu chosenPage={chosenPage} setChosenPage={setChosenPage}></Menu>}
         />
         <Route 
-          path='/'
+          path='wizarding-spell-book//'
           element={<About></About>} 
         />
         <Route 
